@@ -9,6 +9,8 @@ public class Program {
 
 		System.out.println(c1.hashCode());
 		System.out.println(c2.hashCode());
+		System.out.println("--------------");
+		
 	}
 
 }
