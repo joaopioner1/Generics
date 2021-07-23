@@ -1,6 +1,6 @@
 package set_examples;
 
-public class Product {
+public class Product implements Comparable<Product> {
 	
 	private String name;
 	private Double price;
@@ -27,6 +27,17 @@ public class Product {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+
+	@Override 
+	public String toString() {
+		return "PRODUCT NAME: " + getName().toUpperCase()
+				+ "\nPRODUCT PRICE: " + String.format("%.2f", getPrice());
+	}
+	
+	@Override
+	public int compareTo(Product other) {
+		return price.compareTo(other.getPrice()); //comparing
 	}
 	
 	

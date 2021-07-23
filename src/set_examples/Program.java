@@ -2,6 +2,7 @@ package set_examples;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Program {
 
@@ -34,6 +35,17 @@ public class Program {
 		}
 		System.out.println("---------------");
 		System.out.println(setp.contains(prod));
+		System.out.println("---------------");
+		
+		Set<Product> set3 = new TreeSet<>();
+		set3.add(new Product("Rice", 3.50));
+		set3.add(new Product("Beans", 6.50));
+		set3.add(new Product("Oil", 9.80));
+		set3.add(new Product("Meat", 50.95));
+		set3.add(new Product("Pasta", 7.51));
+		
+		for (Product p3 : set3) {
+			System.out.println(p3);
+		}
 	}
-
 }
