@@ -1,6 +1,6 @@
 package exercicio_fixacao;
 
-public class User {
+public class User implements Comparable<User> {
 	
 	private Integer code;
 
@@ -42,6 +42,11 @@ public class User {
 		} else if (!code.equals(other.code))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(User other) {
+		return code.compareTo(other.getCode());
 	}
 	
 	
