@@ -20,6 +20,10 @@ public class Program {
 		Product ps = new Product("Tv", 900.00);
 		
 		System.out.println("Contains 'ps' key: " + stock.containsKey(ps));
+		
+		for (Product p : stock.keySet()) {
+			System.out.println(p);
+		}
 	}
 
 }
